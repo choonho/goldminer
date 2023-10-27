@@ -1,4 +1,4 @@
-name: run main.py
+name: Main trigger
 
 on:
   workflow_dispatch:
