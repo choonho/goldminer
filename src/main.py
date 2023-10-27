@@ -7,4 +7,4 @@ def main(persona):
     print(f"Run {persona} function...")
 
 if __name__ == "__main__":
-    main()
+    main(persona)
