@@ -5,16 +5,17 @@ on:
     - cron: '00 22 * * *' # AM 07:00, KST
   workflow_dispatch:
     inputs:
-      choice:
+      persona:
         type: choice
-        description: "Make a choice"
+        description: "Choose Jellys"
         required: false
-        default: 'all'
+        default: 'Wonny'
         options:
-          - all
           - Wonny
           - Belty
           - Bolby
+env:
+  PERSONA: ${{ github.event.inputs.persona }}
 
 jobs:
   build:

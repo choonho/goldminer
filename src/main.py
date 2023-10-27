@@ -1,7 +1,10 @@
 # This is main function
+import os
 
-def main():
-    print("Run main function...")
+persona = os.environ.get('PERSONA')
+
+def main(persona):
+    print(f"Run {persona} function...")
 
 if __name__ == "__main__":
     main()
