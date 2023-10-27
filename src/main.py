@@ -1,32 +1,26 @@
 # This is main function
 import os
-import persona
+from persona import Persona
 
-persona_name = os.environ.get('PERSONA', 'Wonny')
+persona_name = os.environ.get('PERSONA', 'Belty')
 
-def _list_all_jellys():
-    directory_path = './jellys'
-    contents = os.listdir(directory_path)
-    result = []
-    for item in contents:
-        result.append(item)
-    return result
+script_path = os.path.abspath(__file__)
+script_directory = os.path.dirname(script_path)
+
+kargs = {
+    'persona_dir': os.path.join(script_directory, 'jellys'),
+    }
 
 def _run_jelly(persona_name):
     try:
         print(f"Run {persona_name} jelly...")
-        persona.main(persona_name)
+        p = Persona(persona_name, **kargs)
+        p.load_persona()
     except Exception as e:
         print(e)
 
 def main(persona_name):
-    if persona_name == 'Wonny':
-        jellys = _list_all_jellys()
-    else:
-        jellys = [persona_name]
-
-    for jelly in jellys:
-        _run_jelly(jelly)
+    _run_jelly(persona_name)
 
 
 if __name__ == "__main__":
