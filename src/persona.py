@@ -16,9 +16,6 @@ class Persona:
         data = yaml.safe_load(open(persona_path))
         print(data)
 
-def main(name):
-    load_persona(name)
-
 if __name__ == "__main__":
     name = "Belty"
     p = Persona(name, directory_path=f"./jellys")
