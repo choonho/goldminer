@@ -12,7 +12,8 @@ authors = [
 ]
 
 dependencies = [
-  'requests'
+  'requests',
+  'google-api-python-client'
 ]
 
 [build-system]
