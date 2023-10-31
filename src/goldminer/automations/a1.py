@@ -15,5 +15,5 @@ for item in result:
 from goldminer.tasks.tistory import write_tistory_post
 write_tistory_post("국내증시 " + today, content)
 
-from goldminer.tasks.blogger import create_blogger_post
-create_blogger_post("국내 증시 " + today, content)
+#from goldminer.tasks.blogger import create_blogger_post
+#create_blogger_post("국내 증시 " + today, content)
