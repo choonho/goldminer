@@ -37,7 +37,7 @@ jobs:
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v1
         with:
-          credentials_json: ${{ secret.BLOGSPOT_BASE64 }}
+          credentials_json: ${{ secrets.BLOGSPOT_BASE64 }}
 
       - name: execute python script
         env:
