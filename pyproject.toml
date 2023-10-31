@@ -11,6 +11,10 @@ authors = [
   {name = "Choonho Son", email = "choonho.son@cloudforet.io" }
 ]
 
+dependencies = [
+  'requests'
+]
+
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
