@@ -2,9 +2,10 @@
 # Write to Tistory
 
 from datetime import datetime
+from pytz import timezone
 from goldminer.tasks.naver import search_news
 
-today = datetime.now().strftime("%Y-%m-%d")
+today = datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %H")
 
 result = search_news("국내증시", 5)
 content = ""
