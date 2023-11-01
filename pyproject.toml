@@ -13,7 +13,8 @@ authors = [
 
 dependencies = [
   'requests',
-  'google-api-python-client'
+  'google-api-python-client',
+  'pytz'
 ]
 
 [build-system]
