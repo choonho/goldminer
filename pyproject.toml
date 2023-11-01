@@ -14,7 +14,8 @@ authors = [
 dependencies = [
   'requests',
   'google-api-python-client',
-  'pytz'
+  'pytz',
+  'googletrans==4.0.0-rc1'
 ]
 
 [build-system]
