@@ -1,13 +1,12 @@
-# Flow
-# 1. Read Naver News
-# 2. Write to Tistory
+# Read Naver News
+# Write to Tistory
 
 from datetime import datetime
 from pytz import timezone
 from goldminer.tasks.naver import search_news
 
 today = datetime.now(timezone('Asia/Seoul')).strftime("%Y-%m-%d %H")
-search_key = "국내증시"
+search_key = "부동산"
 
 result = search_news(search_key, 5)
 content = ""
