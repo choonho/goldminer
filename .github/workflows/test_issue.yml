@@ -1,0 +1,19 @@
+name: Test Issue
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  build:
+    environment: goldminer
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2
+
+      - name: Read Issue information
+        run: |
+          echo "Issue title: ${{ github.event.issue.title }}"
+          echo "Issue body: ${{ github.event.issue.body }}"
+
