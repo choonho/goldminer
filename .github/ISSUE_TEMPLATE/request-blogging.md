@@ -1,10 +1,16 @@
 ---
 name: Request Blogging
-about: Describe this issue template's purpose here.
+about: Request Blogging with specific keywords.
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
+### Category
+- [ ] 국내증시
+- [ ] 해외증시
+- [ ] 부동산
+- [ ] 상식
 
+### Keywords
