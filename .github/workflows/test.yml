@@ -1,9 +1,10 @@
-name: Main trigger
+name: Blog Posting
 
 on:
   schedule:
     - cron: '00 00 * * *' # AM 09:00, KST
     - cron: '00 04 * * *' # AM 13:00, KST
+    - cron: '00 08 * * *' # AM 17:00, KST
 
   workflow_dispatch:
     inputs:
