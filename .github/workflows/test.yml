@@ -22,17 +22,18 @@ jobs:
       - name: checkout repo content
         uses: actions/checkout@v2
 
+      - name: Secret to File
+        uses: mobiledevops/secret-to-file-action@v1
+        with:
+          base64-encoded-secret: ${{ secrets.TEST_JSON }}
+          filename: my_test.json
+          is-executable: false
+          working-director: "./"
+
       - name: test code
-        env:
-          TEST_JSON: ${{ secrets.TEST_JSON }}
         run: |
-          echo $TEST_JSON > my_test.json
           echo "Datetime"
           date
           echo "Saved file"
           cat ./my_test.json
           echo "End of File"
-          echo "Environments"
-          env
-          echo "ls ....."
-          ls
