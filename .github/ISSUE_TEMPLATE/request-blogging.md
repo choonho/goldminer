@@ -2,8 +2,6 @@
 name: Request Blogging
 about: Request Blogging with specific keywords.
 title: ''
-labels: ''
-assignees: ''
 
 ---
 
@@ -12,5 +10,3 @@ assignees: ''
 - [ ] 해외증시
 - [ ] 부동산
 - [ ] 상식
-
-### Keywords
