@@ -1,0 +1,33 @@
+name: Test
+
+on:
+  schedule:
+    - cron: '00 00 * * *' # AM 09:00, KST
+    - cron: '00 04 * * *' # AM 13:00, KST
+    - cron: '00 08 * * *' # AM 17:00, KST
+
+  workflow_dispatch:
+    inputs:
+      persona:
+        type: choice
+        description: "Choose Jellys"
+        required: false
+        default: 'Wonny'
+        options:
+          - Wonny
+          - Belty
+          - Bolby
+env:
+  PERSONA: ${{ github.event.inputs.persona }}
+jobs:
+  build:
+    environment: goldminer
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2
+
+      - name: test code
+        run: |
+          echo "Datetime"
+          date
