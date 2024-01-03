@@ -1,12 +1,12 @@
 name: A1
 
 on:
-  schedule:
-    - cron: '00 22 * * *' # AM 07:00, KST
-    - cron: '00 00 * * *' # AM 09:00, KST
-    - cron: '00 02 * * *' # AM 11:00, KST
-    - cron: '00 04 * * *' # AM 13:00, KST
-    - cron: '00 07 * * *' # AM 14:00, KST
+#  schedule:
+#    - cron: '00 22 * * *' # AM 07:00, KST
+#    - cron: '00 00 * * *' # AM 09:00, KST
+#    - cron: '00 02 * * *' # AM 11:00, KST
+#    - cron: '00 04 * * *' # AM 13:00, KST
+#    - cron: '00 07 * * *' # AM 14:00, KST
 
   workflow_dispatch:
     inputs:
